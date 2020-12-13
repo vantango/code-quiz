@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
+    <title>World History Quiz</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,9 +13,10 @@
 <body>
     <main>
         <section class="container">
-            <p>Time remaining: <span id="clock">0:00</span></p>
+            <p id="timer">Time remaining: <span id="clock">0:00</span></p>
+            <a id="highscores" src="#" href="View Highscores">View Highscores</a>
             <div class="jumbotron" id="start-screen">
-                <h1 class="display-4">History Quiz!</h1>
+                <h1 class="display-4">World History Quiz!</h1>
                 <p class="lead">Try to answer as many questions correctly within the given 90 seconds. For every
                     question
                     that is answered incorrectly, you lose 5 seconds off of the timer. Your final score will be whatever
@@ -40,10 +41,10 @@
         </section>
         <section id="end-results-scoreboard" style="display: none">
             <h2>
-                all done!
+                All done!
             </h2>
             <p>
-                your score is <span id="player-score">100</span>
+                Your score is <span id="player-score">100</span>
             </p>
             <p>
                 Please enter initials

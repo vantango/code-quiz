@@ -6,8 +6,17 @@
     margin-top: 10%;
     margin-right: 20%;
     margin-left: 20%;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
+#timer {
+    float: right;
+}
+
+.lead {
+    text-align: center;
+}
 /* display:block */
