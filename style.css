@@ -1,0 +1,13 @@
+/* .container {
+    margin: 10px;
+} */
+
+.jumbotron {
+    margin-top: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+/* display:block */
