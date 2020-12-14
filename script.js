@@ -4,8 +4,8 @@
 // TODO: Create a History Quiz!
 
 // TODO: Prompt user to click start button from the home page
+var generateQuiz = document.querySelector("start-quiz");
 btn.addEventListener("click", quizList)
-var generateQuiz = document.querySelector("btn");
 
 // Create a function to display question and answer
 function displayQuiz(quizList) {
@@ -13,84 +13,44 @@ function displayQuiz(quizList) {
     // TODO: Once the button is clicked, the countdown timer starts and the user is presented with a series of multiple choice questions
     var quizList = [
         {
-            question1: "Who was the 27th President of the United States?",
-            choices: {
-                A: "William Howard Taft",
-                B: "Franklin Pierce",
-                C: "Theodore Roosevelt",
-                D: "Woodrow Wilson"
-            }
-        correctAnswer = "A"
+            question: "Who was the 27th President of the United States?",
+            choices: ["William Howard-Taft", "Franklin Pierce", "Theodore Roosevelt", "Woodrow Wilson"]
+            correctAnswer = "William Howard-Taft"
         }
         {
-            question2: "What year did the Berlin Conference take place?",
-            choices: {
-                A: "1867",
-                B: "1995",
-                C: "1884",
-                D: "1721",
-            }
-            correctAnswer = "C"
+            question: "What year did the Berlin Conference take place?",
+            choices: ["1867", "1995", "1884", "1721",]
+            correctAnswer = "1884"
         }
         {
-            question3: "Which ancient empire ruled the British Isles between 208-11 AD?",
-            choices: {
-                A: "Greeks",
-                B: "Byzantines",
-                C: "Romans",
-                D: "Huns",
-            }
-        correctAnswer = "C"
+            question: "Which ancient empire ruled the British Isles between 208-11 AD?",
+            choices: ["Greeks", "Byzantines", "Romans", "Huns",]
+            correctAnswer = "Romans"
         }
         {
-            question4: "Who invented the world wide web?",
-            choices: {
-                A: "Brendan Eich",
-                B: "Barbara Liskov",
-                C: "Alan Turing",
-                D: "Tim Berners-Lee",
-            }
-        correctAnswer = "D"
+            question: "Who invented the world wide web?",
+            choices: ["Brendan Eich", "Barbara Liskov", "Alan Turing", "Tim Berners-Lee",]
+            correctAnswer = "TIm Berners-Lee"
         }
         {
-            question5: "What year did Colombia gain it's independence?",
-            choices: {
-                A: "1810",
-                B: "1782",
-                C: "1656",
-                D: "1938",
-            }
-        correctAnswer = "A"
+            question: "What year did Colombia gain it's independence?",
+            choices: ["1810", "1782", "1656", "1938",]
+            correctAnswer = "1810"
         }
         {
-            question6: "Which Tsar of Russia freed the serfs?",
-            choices: {
-                A: "Ivan V",
-                B: "Alexander II",
-                C: "Peter III",
-                D: "Catherine II",
-            }
-        correctAnswer = "B"
+            question: "Which Tsar of Russia freed the serfs?",
+            choices: ["Ivan V", "Alexander II", "Peter III", "Catherine II",]
+            correctAnswer = "Alexandr II"
         }
         {
-            question7: "Who launched the counter-offensive that initiated the Battle of the Bulge in WWII?",
-            choices: {
-                A: "UK",
-                B: "Russia",
-                C: "United States",
-                D: "Germany",
-            }
-        correctAnswer = "D"
+            question: "Who launched the counter-offensive that initiated the Battle of the Bulge in WWII?",
+            choices: ["UK", "Russia", "United States", "Germany",]
+             correctAnswer = "Germany"
         }
         {
-            question8: "Which famous Spanish painter is known for the masterpiece 'Last Meninas?'",
-            choices: {
-                A: "Salvador Dali",
-                B: "Pablo Picasso",
-                C: "Diego Velasquez",
-                D: "Francisco de Goya",
-            }
-        correctAnswer = "C"
+            question: "Which famous Spanish painter is known for the masterpiece 'Last Meninas?'",
+            choices: ["Salvador Dali", "Pablo Picasso", "Diego Velasquez", "Francisco de Goya",]
+            correctAnswer = "Diego Velasquez"
         }
     ]
 }
@@ -130,19 +90,19 @@ var question =;
 
 
 
-function setTime() {
-    timerInterval = setInterval(function () {
-        secondsLeft--;
-        timeEl.textContent = secondsLeft + "Game Over!";
+// function setTime() {
+//     timerInterval = setInterval(function () {
+//         secondsLeft--;
+//         timeEl.textContent = secondsLeft + "Game Over!";
 
-        if (secondsLeft === 0) {
-            clearInterval(timerInterval);
-            // quizEnd()
-        }
-    }, 1000);
-}
+//         if (secondsLeft === 0) {
+//             clearInterval(timerInterval);
+//             // quizEnd()
+//         }
+//     }, 1000);
+// }
 
-setTime();
+// setTime();
 
 // TODO: For every question answered correctly, they are notified that they got the correct answer
 
