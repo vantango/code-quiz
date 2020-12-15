@@ -6,7 +6,7 @@ body {
 }
 
 .jumbotron {
-    margin-top: 10%;
+    margin-top: 20%;
     margin-right: 20%;
     margin-left: 20%;
     text-align: center;
@@ -31,13 +31,14 @@ body {
     content: center;
     text-align: center;
     background-color: white;
-    : 50%;
 }
 
 #answers {
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding-left: 30%;
+    width: 70%;
     justify-content: center;
 }
 
