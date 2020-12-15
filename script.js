@@ -77,7 +77,10 @@ var questionScreen = document.getElementById("display-questions")
 // Create conditional for when all questions done
 
 // Create function for end of quiz
+// Grab value of the playscore and the intials 
 // Create function for saved data in local storage (player score)
+
+// The user is then prompted to enter their initials through an input field and submitted via a button. Their score is then presented at the top left field of the screen.
 function gameResults() {
     console.log("game ends")
     var endScreenEl = document.getElementById("end-results-scoreboard")
@@ -92,7 +95,7 @@ function gameResults() {
     // );
     // Set the score on player-score element 
 }
-//grab value of the playscore and the intials 
+
 
 //use localstorage.setItem() 
 
@@ -126,7 +129,6 @@ function validateAnswer() {
 }
 
 function displayQuestion() {
-    // console.log(quizList[questionIndex])
 
     // Displays my current question here 
     var question1 = document.getElementById("display-question")
@@ -206,4 +208,4 @@ generateQuiz.addEventListener("click", function () {
 
 
 
-// TODO: The user is then prompted to enter their initials through an input field and submitted via a button. Their score is then presented at the top left field of the screen.
+
