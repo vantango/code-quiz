@@ -25,10 +25,13 @@ body {
 /* display:block */
 
 #display-questions {
-    margin-top: 10%;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-top: 20%;
+    margin-right: 30%;
+    margin-left: 30%;
+    content: center;
     text-align: center;
+    background-color: white;
+    : 50%;
 }
 
 #answers {
@@ -39,8 +42,20 @@ body {
 }
 
 #end-results-scoreboard {
+    margin-top: 20%;
+    margin-right: 30%;
+    margin-left: 30%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: white;
+}
+
+#highscores {
+    background-color: white;
+}
+
+#timer {
+    background-color: white;
 }

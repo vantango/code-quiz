@@ -164,7 +164,6 @@ generateQuiz.addEventListener("click", function () {
         // timer.style.textAlign = "center";
         if (timeLeft === 0) {
             clearInterval(timeLeft);
-            // hiscores();
         }
     }, 1000);
 })
