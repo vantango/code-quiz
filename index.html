@@ -13,7 +13,7 @@
 <body>
     <main>
         <section class="container">
-            <p id="timer">Time remaining: <span id="clock">0:00</span></p>
+            <p id="timer">Time remaining: <span id="clock"></span></p>
             <a id="highscores" src="#" href="View Highscores">View Highscores</a>
             <div class="jumbotron" id="start-screen">
                 <h1 class="display-4">World History Quiz!</h1>
@@ -30,13 +30,12 @@
         <section id="display-questions" style="display: none;">
             <h2 id="display-question">sample question here</h2>
             <ol id="answers">
-                <li id="answer1">answer</li>
-                <li id="answer2">answer</li>
-                <li id="answer3">answer</li>
-                <li id="answer4">answer</li>
+                <li id="answer1" class="btn btn-outline-secondary">answer</li>
+                <li id="answer2" class="btn btn-outline-secondary">answer</li>
+                <li id="answer3" class="btn btn-outline-secondary">answer</li>
+                <li id="answer4" class="btn btn-outline-secondary">answer</li>
             </ol>
-            <p id="message">
-                feedback comes here
+            <p id="correctAnswer">
             </p>
         </section>
         <section id="end-results-scoreboard" style="display: none;">
@@ -44,15 +43,14 @@
                 All done!
             </h2>
             <p>
-                Your score is <span id="player-score">100</span>
+                Your score is <span id="player-score"></span>
             </p>
             <p>
-                Please enter initials:
+                Please enter your initials:
                 <input id="intials" maxlength=3 type="text">
             </p>
             <button id="submit-score">submit score</button>
         </section>
-
     </main>
 
     <script src="script.js"></script>

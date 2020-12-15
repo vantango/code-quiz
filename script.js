@@ -2,11 +2,6 @@
 
 // TODO: Prompt user to click start button from the home page
 var generateQuiz = document.querySelector("#start-quiz");
-generateQuiz.addEventListener("click", function () {
-    document.querySelector("#display-questions").style.display = "block";
-    document.querySelector("#start-screen").style.display = "none";
-
-})
 
 // Create a function to display question and answer
 
@@ -52,75 +47,139 @@ var quizList = [
         choices: ["Salvador Dali", "Pablo Picasso", "Diego Velasquez", "Francisco de Goya",],
         correctAnswer: "Diego Velasquez"
     }
-
-    //     for (let i = 0; i < quizList.length; i++) {
-
-
-    // }
 ]
-
-console.log(quizList[0].question)
-var question1 = document.getElementById("display-question")
-question1.textContent = quizList[0].question
-
-var question1 = document.getElementById("answer1")
-question1.textContent = quizList[0].choices[0]
-var question1 = document.getElementById("answer2")
-question1.textContent = quizList[0].choices[1]
-var question1 = document.getElementById("answer3")
-question1.textContent = quizList[0].choices[2]
-var question1 = document.getElementById("answer4")
-question1.textContent = quizList[0].choices[3]
-
-
-console.log(quizList[1].question)
-var question1 = document.getElementById("display-question")
-question1.textContent = quizList[1].question
-
-var question2 = document.getElementById("answer1")
-question1.textContent = quizList[0].choices[0]
-var question2 = document.getElementById("answer2")
-question1.textContent = quizList[0].choices[1]
-var question2 = document.getElementById("answer3")
-question1.textContent = quizList[0].choices[2]
-var question2 = document.getElementById("answer4")
-question1.textContent = quizList[0].choices[3]
-
-
-
-
-
 var timeLeft = 90;
-
-var timerInterval;
+var timer = document.querySelector("#clock");
+var quizTime = 0;
 
 var timeEl = document.getElementById("clock")
+
 // Create variable for player score
-var playerScore = document.getElementById("player-score");
+var playerScoreEl = document.getElementById("player-score");
+
 // Create variable for question index
-var questionIndex = document.getElementById("display-question"[0]);
+var questionIndex = 0;
+
 // Create variable for initials input
 var initials = "initials";
+var playerScore = 0;
 
+// Create variables for answers
+var answer1El = document.getElementById("answer1");
+var answer2El = document.getElementById("answer2");
+var answer3El = document.getElementById("answer3");
+var answer4El = document.getElementById("answer4");
+var correctAnswer = document.getElementById("correctAnswer")
+var questionScreen = document.getElementById("display-questions")
 
-
-
-// Create four variables for answers
-var answer1 = 0;
-var answer2 = 1;
-var answer3 = 2;
-var answer4 = 3;
 // Create one variable for question
-// var question =;
-// Create one variable for the message
+
 // Create conditional for when all questions done
+
 // Create function for end of quiz
 // Create function for saved data in local storage (player score)
+function gameResults() {
+    console.log("game ends")
+    var endScreenEl = document.getElementById("end-results-scoreboard")
+    endScreenEl.style.display = "block";
+    questionScreen.style.display = "none"
+    // localStorage.setItem(
+    //     "preferences",
+    //     JSON.stringify({
+    //         workMinutes: workMinutesInput.value.trim(),
+    //         restMinutes: restMinutesInput.value.trim()
+    //     })
+    // );
+    // Set the score on player-score element 
+}
+//grab value of the playscore and the intials 
+
+//use localstorage.setItem() 
 
 
+function validateAnswer() {
+    // console.log("User answer", this.textContent)
+    // console.log("Correct Answer", quizList[questionIndex].correctAnswer)
 
+    // If the answer is right, add 5 seconds to the time left 
+    if (this.textContent === quizList[questionIndex].correctAnswer) {
+        // Create one variable for the message
+        // Penalty time + 5 seconds
+        timeLeft = timeLeft + 5;
+        correctAnswer.textContent = "Correct!"
+    } else {
+        // Penalty time - 5 seconds 
+        timeLeft = timeLeft - 5;
+        correctAnswer.textContent = "Incorrect!"
+    }
 
+    // Move to next question 
+    questionIndex++;
 
+    // Reaches last question 
+    if (questionIndex === quizList.length) {
+        gameResults()
+    }
+    else (
+        displayQuestion()
+    )
+}
+
+function displayQuestion() {
+    // console.log(quizList[questionIndex])
+
+    // Displays my current question here 
+    var question1 = document.getElementById("display-question")
+    question1.textContent = quizList[questionIndex].question
+
+    // Setting my answer choices for the current question index 
+    answer1El.textContent = quizList[questionIndex].choices[0]
+    answer2El.textContent = quizList[questionIndex].choices[1]
+    answer3El.textContent = quizList[questionIndex].choices[2]
+    answer4El.textContent = quizList[questionIndex].choices[3]
+
+    answer1El.value = quizList[questionIndex].choices[0]
+    answer2El.value = quizList[questionIndex].choices[1]
+    answer3El.value = quizList[questionIndex].choices[2]
+    answer4El.value = quizList[questionIndex].choices[3]
+    console.log(answer1El)
+
+    // Adding Event listinere on click of each ans button 
+    answer1El.onclick = validateAnswer;
+    answer2El.onclick = validateAnswer;
+    answer3El.onclick = validateAnswer;
+    answer4El.onclick = validateAnswer;
+}
+
+// User clicks start button to launch first question in index
+generateQuiz.addEventListener("click", function () {
+    document.querySelector("#display-questions").style.display = "block";
+    document.querySelector("#start-screen").style.display = "none";
+    displayQuestion()
+    var timeInterval = setInterval(function () {
+        timeLeft--;
+        timer.textContent = timeLeft + " left in quiz";
+        // timer.style.textAlign = "center";
+        if (timeLeft === 0) {
+            clearInterval(timeLeft);
+            // hiscores();
+        }
+    }, 1000);
+})
+// console.log(quizList[1].question)
+// var question1 = document.getElementById("display-question")
+// question1.textContent = quizList[1].question
+
+// var question2 = document.getElementById("answer1")
+// question1.textContent = quizList[0].choices[0]
+// var question2 = document.getElementById("answer2")
+// question1.textContent = quizList[0].choices[1]
+// var question2 = document.getElementById("answer3")
+// question1.textContent = quizList[0].choices[2]
+// var question2 = document.getElementById("answer4")
+// question1.textContent = quizList[0].choices[3]
+
+// var secondsLeft = 90;
 // function setTime() {
 //     timerInterval = setInterval(function () {
 //         secondsLeft--;
@@ -132,6 +191,10 @@ var answer4 = 3;
 //         }
 //     }, 1000);
 // }
+// setInterval(secondsLeft);
+
+
+
 
 // setTime();
 
