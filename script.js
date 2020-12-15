@@ -1,59 +1,95 @@
-
-
-
 // TODO: Create a History Quiz!
 
 // TODO: Prompt user to click start button from the home page
-var generateQuiz = document.querySelector("start-quiz");
-btn.addEventListener("click", quizList)
+var generateQuiz = document.querySelector("#start-quiz");
+generateQuiz.addEventListener("click", function () {
+    document.querySelector("#display-questions").style.display = "block";
+    document.querySelector("#start-screen").style.display = "none";
+
+})
 
 // Create a function to display question and answer
-function displayQuiz(quizList) {
 
-    // TODO: Once the button is clicked, the countdown timer starts and the user is presented with a series of multiple choice questions
-    var quizList = [
-        {
-            question: "Who was the 27th President of the United States?",
-            choices: ["William Howard-Taft", "Franklin Pierce", "Theodore Roosevelt", "Woodrow Wilson"]
-            correctAnswer = "William Howard-Taft"
-        }
-        {
-            question: "What year did the Berlin Conference take place?",
-            choices: ["1867", "1995", "1884", "1721",]
-            correctAnswer = "1884"
-        }
-        {
-            question: "Which ancient empire ruled the British Isles between 208-11 AD?",
-            choices: ["Greeks", "Byzantines", "Romans", "Huns",]
-            correctAnswer = "Romans"
-        }
-        {
-            question: "Who invented the world wide web?",
-            choices: ["Brendan Eich", "Barbara Liskov", "Alan Turing", "Tim Berners-Lee",]
-            correctAnswer = "TIm Berners-Lee"
-        }
-        {
-            question: "What year did Colombia gain it's independence?",
-            choices: ["1810", "1782", "1656", "1938",]
-            correctAnswer = "1810"
-        }
-        {
-            question: "Which Tsar of Russia freed the serfs?",
-            choices: ["Ivan V", "Alexander II", "Peter III", "Catherine II",]
-            correctAnswer = "Alexandr II"
-        }
-        {
-            question: "Who launched the counter-offensive that initiated the Battle of the Bulge in WWII?",
-            choices: ["UK", "Russia", "United States", "Germany",]
-             correctAnswer = "Germany"
-        }
-        {
-            question: "Which famous Spanish painter is known for the masterpiece 'Last Meninas?'",
-            choices: ["Salvador Dali", "Pablo Picasso", "Diego Velasquez", "Francisco de Goya",]
-            correctAnswer = "Diego Velasquez"
-        }
-    ]
-}
+// TODO: Once the button is clicked, the countdown timer starts and the user is presented with a series of multiple choice questions
+var quizList = [
+    {
+        question: "Who was the 27th President of the United States?",
+        choices: ["William Howard-Taft", "Franklin Pierce", "Theodore Roosevelt", "Woodrow Wilson"],
+        correctAnswer: "William Howard-Taft"
+    },
+    {
+        question: "What year did the Berlin Conference take place?",
+        choices: ["1867", "1995", "1884", "1721",],
+        correctAnswer: "1884"
+    },
+    {
+        question: "Which ancient empire ruled the British Isles between 208-11 AD?",
+        choices: ["Greeks", "Byzantines", "Romans", "Huns",],
+        correctAnswer: "Romans"
+    },
+    {
+        question: "Who invented the world wide web?",
+        choices: ["Brendan Eich", "Barbara Liskov", "Alan Turing", "Tim Berners-Lee",],
+        correctAnswer: "TIm Berners-Lee"
+    },
+    {
+        question: "What year did Colombia gain it's independence?",
+        choices: ["1810", "1782", "1656", "1938",],
+        correctAnswer: "1810"
+    },
+    {
+        question: "Which Tsar of Russia freed the serfs?",
+        choices: ["Ivan V", "Alexander II", "Peter III", "Catherine II",],
+        correctAnswer: "Alexandr II"
+    },
+    {
+        question: "Who launched the counter-offensive that initiated the Battle of the Bulge in WWII?",
+        choices: ["UK", "Russia", "United States", "Germany",],
+        correctAnswer: "Germany"
+    },
+    {
+        question: "Which famous Spanish painter is known for the masterpiece 'Last Meninas?'",
+        choices: ["Salvador Dali", "Pablo Picasso", "Diego Velasquez", "Francisco de Goya",],
+        correctAnswer: "Diego Velasquez"
+    }
+
+    //     for (let i = 0; i < quizList.length; i++) {
+
+
+    // }
+]
+
+console.log(quizList[0].question)
+var question1 = document.getElementById("display-question")
+question1.textContent = quizList[0].question
+
+var question1 = document.getElementById("answer1")
+question1.textContent = quizList[0].choices[0]
+var question1 = document.getElementById("answer2")
+question1.textContent = quizList[0].choices[1]
+var question1 = document.getElementById("answer3")
+question1.textContent = quizList[0].choices[2]
+var question1 = document.getElementById("answer4")
+question1.textContent = quizList[0].choices[3]
+
+
+console.log(quizList[1].question)
+var question1 = document.getElementById("display-question")
+question1.textContent = quizList[1].question
+
+var question2 = document.getElementById("answer1")
+question1.textContent = quizList[0].choices[0]
+var question2 = document.getElementById("answer2")
+question1.textContent = quizList[0].choices[1]
+var question2 = document.getElementById("answer3")
+question1.textContent = quizList[0].choices[2]
+var question2 = document.getElementById("answer4")
+question1.textContent = quizList[0].choices[3]
+
+
+
+
+
 var timeLeft = 90;
 
 var timerInterval;
@@ -69,18 +105,13 @@ var initials = "initials";
 
 
 
-
-
-
-
-
 // Create four variables for answers
-var answer1 = "A";
-var answer2 = "B";
-var answer3 = "C";
-var answer4 = "D";
+var answer1 = 0;
+var answer2 = 1;
+var answer3 = 2;
+var answer4 = 3;
 // Create one variable for question
-var question =;
+// var question =;
 // Create one variable for the message
 // Create conditional for when all questions done
 // Create function for end of quiz
