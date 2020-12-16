@@ -57,6 +57,7 @@ var timeEl = document.getElementById("clock")
 
 // Create variable for player score
 var playerScoreEl = document.getElementById("player-score");
+playerScoreEl.textContent = timeLeft
 
 // Create variable for question index
 var questionIndex = 0;
