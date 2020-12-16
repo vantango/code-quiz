@@ -21,4 +21,4 @@ For this assignment, I was tasked with creating a quiz (topic of my choice) that
 https://vantango.github.io/code-quiz/
 
 #### Repository
-https://github.com/vantango/random-code-generator
+https://github.com/vantango/code-quiz
