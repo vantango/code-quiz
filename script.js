@@ -48,7 +48,7 @@ var quizList = [
         correctAnswer: "Diego Velasquez"
     }
 ]
-var timeLeft = 90;
+var timeLeft = 60;
 var timer = document.querySelector("#clock");
 var quizTime = 0;
 
@@ -160,39 +160,13 @@ generateQuiz.addEventListener("click", function () {
     displayQuestion()
     var timeInterval = setInterval(function () {
         timeLeft--;
-        timer.textContent = timeLeft + " left in quiz";
+        timer.textContent = timeLeft + " seconds left in quiz";
         // timer.style.textAlign = "center";
-        if (timeLeft === 0) {
-            clearInterval(timeLeft);
+        if (timeLeft === 0 || quizList === quizList.length) {
+            clearInterval(timeInterval);
         }
     }, 1000);
 })
-// console.log(quizList[1].question)
-// var question1 = document.getElementById("display-question")
-// question1.textContent = quizList[1].question
-
-// var question2 = document.getElementById("answer1")
-// question1.textContent = quizList[0].choices[0]
-// var question2 = document.getElementById("answer2")
-// question1.textContent = quizList[0].choices[1]
-// var question2 = document.getElementById("answer3")
-// question1.textContent = quizList[0].choices[2]
-// var question2 = document.getElementById("answer4")
-// question1.textContent = quizList[0].choices[3]
-
-// var secondsLeft = 90;
-// function setTime() {
-//     timerInterval = setInterval(function () {
-//         secondsLeft--;
-//         timeEl.textContent = secondsLeft + "Game Over!";
-
-//         if (secondsLeft === 0) {
-//             clearInterval(timerInterval);
-//             // quizEnd()
-//         }
-//     }, 1000);
-// }
-// setInterval(secondsLeft);
 
 
 
