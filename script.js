@@ -24,7 +24,7 @@ var quizList = [
     },
     {
         question: "Who invented the world wide web?",
-        choices: ["Brendan Eich", "Barbara Liskov", "Alan Turing", "Tim Berners-Lee",],
+        choices: ["Brendan Eich", "Barbara Liskov", "Al Gore", "Tim Berners-Lee",],
         correctAnswer: "Tim Berners-Lee"
     },
     {
