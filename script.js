@@ -1,11 +1,11 @@
-// TODO: Create a History Quiz!
+// Create a History Quiz!
 
-// TODO: Prompt user to click start button from the home page
+// Prompt user to click start button from the home page
 var generateQuiz = document.querySelector("#start-quiz");
 
 // Create a function to display question and answer
 
-// TODO: Once the button is clicked, the countdown timer starts and the user is presented with a series of multiple choice questions
+// Once the button is clicked, the countdown timer starts and the user is presented with a series of multiple choice questions
 var quizList = [
     {
         question: "Who was the 27th President of the United States?",
@@ -73,8 +73,6 @@ var answer4El = document.getElementById("answer4");
 var correctAnswer = document.getElementById("correctAnswer")
 var questionScreen = document.getElementById("display-questions")
 
-
-
 // Create function for end of quiz
 
 
@@ -96,7 +94,6 @@ function gameResults() {
 
 // Grab value of the playscore and the intials 
 // Create function for saved data in local storage (player score)
-
 
 //use localstorage.setItem() 
 
@@ -128,7 +125,6 @@ function validateAnswer() {
 }
 
 function displayQuestion() {
-
     // Displays my current question here 
     var question1 = document.getElementById("display-question")
     question1.textContent = quizList[questionIndex].question
@@ -166,15 +162,6 @@ generateQuiz.addEventListener("click", function () {
         }
     }, 1000);
 })
-
-
-
-
-
-
-// TODO: For every question answered correctly, they are notified that they got the correct answer
-
-// TODO: If the user answers the question incorrectly, they are notified that their answer was incorrect and 5 seconds are taken off of the timer
 
 
 
