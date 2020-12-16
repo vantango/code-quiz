@@ -25,7 +25,7 @@ var quizList = [
     {
         question: "Who invented the world wide web?",
         choices: ["Brendan Eich", "Barbara Liskov", "Alan Turing", "Tim Berners-Lee",],
-        correctAnswer: "TIm Berners-Lee"
+        correctAnswer: "Tim Berners-Lee"
     },
     {
         question: "What year did Colombia gain it's independence?",
@@ -35,7 +35,7 @@ var quizList = [
     {
         question: "Which Tsar of Russia freed the serfs?",
         choices: ["Ivan V", "Alexander II", "Peter III", "Catherine II",],
-        correctAnswer: "Alexandr II"
+        correctAnswer: "Alexander II"
     },
     {
         question: "Who launched the counter-offensive that initiated the Battle of the Bulge in WWII?",
@@ -48,6 +48,7 @@ var quizList = [
         correctAnswer: "Diego Velasquez"
     }
 ]
+// Set time
 var timeLeft = 60;
 var timer = document.querySelector("#clock");
 var quizTime = 0;
@@ -72,13 +73,10 @@ var answer4El = document.getElementById("answer4");
 var correctAnswer = document.getElementById("correctAnswer")
 var questionScreen = document.getElementById("display-questions")
 
-// Create one variable for question
 
-// Create conditional for when all questions done
 
 // Create function for end of quiz
-// Grab value of the playscore and the intials 
-// Create function for saved data in local storage (player score)
+
 
 // The user is then prompted to enter their initials through an input field and submitted via a button. Their score is then presented at the top left field of the screen.
 function gameResults() {
@@ -96,17 +94,17 @@ function gameResults() {
     // Set the score on player-score element 
 }
 
+// Grab value of the playscore and the intials 
+// Create function for saved data in local storage (player score)
+
 
 //use localstorage.setItem() 
 
 
 function validateAnswer() {
-    // console.log("User answer", this.textContent)
-    // console.log("Correct Answer", quizList[questionIndex].correctAnswer)
-
     // If the answer is right, add 5 seconds to the time left 
     if (this.textContent === quizList[questionIndex].correctAnswer) {
-        // Create one variable for the message
+        // Variable for the message
         // Penalty time + 5 seconds
         timeLeft = timeLeft + 5;
         correctAnswer.textContent = "Correct!"
@@ -119,6 +117,7 @@ function validateAnswer() {
     // Move to next question 
     questionIndex++;
 
+    // Conditional for when all questions done
     // Reaches last question 
     if (questionIndex === quizList.length) {
         gameResults()
@@ -158,11 +157,11 @@ generateQuiz.addEventListener("click", function () {
     document.querySelector("#display-questions").style.display = "block";
     document.querySelector("#start-screen").style.display = "none";
     displayQuestion()
+    // Once the user has answered all of the questions or the timer reaches 0, the remaining time left on the timer is calculated into a score and presented.
     var timeInterval = setInterval(function () {
         timeLeft--;
         timer.textContent = timeLeft + " seconds left in quiz";
-        // timer.style.textAlign = "center";
-        if (timeLeft === 0 || quizList === quizList.length) {
+        if (timeLeft === 0 || questionIndex === 7) {
             clearInterval(timeInterval);
         }
     }, 1000);
@@ -171,13 +170,13 @@ generateQuiz.addEventListener("click", function () {
 
 
 
-// setTime();
+
 
 // TODO: For every question answered correctly, they are notified that they got the correct answer
 
 // TODO: If the user answers the question incorrectly, they are notified that their answer was incorrect and 5 seconds are taken off of the timer
 
-// TODO: Once the user has answered all of the questions or the timer reaches 0, the remaining time left on the timer is calculated into a score and presented to them.
+
 
 
 
