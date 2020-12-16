@@ -83,10 +83,9 @@ function gameResults() {
     endScreenEl.style.display = "block";
     questionScreen.style.display = "none"
     // localStorage.setItem(
-    //     "preferences",
+    //     "",
     //     JSON.stringify({
-    //         workMinutes: workMinutesInput.value.trim(),
-    //         restMinutes: restMinutesInput.value.trim()
+    // 
     //     })
     // );
     // Set the score on player-score element 

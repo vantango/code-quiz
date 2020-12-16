@@ -18,7 +18,7 @@ For this assignment, I was tasked with creating a quiz (topic of my choice) that
 * Created function that starts the timer as soon as the start quiz button is clicked.
 
 #### Deployment
-https://vantango.github.io/random-code-generator/
+https://vantango.github.io/code-quiz/
 
 #### Repository
 https://github.com/vantango/random-code-generator
