@@ -57,7 +57,6 @@ var timeEl = document.getElementById("clock")
 
 // Create variable for player score
 var playerScoreEl = document.getElementById("player-score");
-playerScoreEl.textContent = timeLeft
 
 // Create variable for question index
 var questionIndex = 0;
@@ -83,6 +82,7 @@ function gameResults() {
     var endScreenEl = document.getElementById("end-results-scoreboard")
     endScreenEl.style.display = "block";
     questionScreen.style.display = "none"
+    playerScoreEl.textContent = timeLeft
     // localStorage.setItem(
     //     "",
     //     JSON.stringify({
@@ -155,13 +155,16 @@ generateQuiz.addEventListener("click", function () {
     displayQuestion()
     // Once the user has answered all of the questions or the timer reaches 0, the remaining time left on the timer is calculated into a score and presented.
     var timeInterval = setInterval(function () {
-        timeLeft--;
+
         timer.textContent = timeLeft + " seconds left in quiz";
-        if (timeLeft === 0 || questionIndex === 7) {
+        if (timeLeft === 0 || questionIndex === 8) {
             clearInterval(timeInterval);
         }
+        timeLeft--;
     }, 1000);
 })
+
+
 
 
 
