@@ -22,3 +22,5 @@ https://vantango.github.io/code-quiz/
 
 #### Repository
 https://github.com/vantango/code-quiz
+
+![alt text](https://raw.githubusercontent.com/Lax-Walrus/code-refractor-hw/main/assets/screen%20shots/screencapture-lax-walrus-github-io-code-refractor-hw-2020-12-03-14_50_40.png)
