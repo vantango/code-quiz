@@ -94,8 +94,22 @@ function gameResults() {
 
 // Grab value of the playscore and the intials 
 // Create function for saved data in local storage (player score)
+function saveScore() {
+    var playerInitials = document.getElementById("initials").value
+    var playerScore = {
+        score: timeLeft,
+        initials: playerInitials
+    }
 
-//use localstorage.setItem() 
+    // Retrieving previously saved scores from local storage
+    var previousScores = JSON.parse(localStorage.getItem("player-scores")) || []
+    previousScores.push(playerScore)
+    console.log(playerScore);
+    localStorage.setItem("player-scores", JSON.stringify(previousScores));
+
+    // Redirecting to high scores page
+    window.location.href = "highscores.html"
+}
 
 
 function validateAnswer() {
@@ -164,6 +178,8 @@ generateQuiz.addEventListener("click", function () {
     }, 1000);
 })
 
+var submitScore = document.getElementById("submit-score");
+submitScore.onclick = saveScore;
 
 
 
